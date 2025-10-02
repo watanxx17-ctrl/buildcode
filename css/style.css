@@ -1,0 +1,208 @@
+:root {
+    --dark-bg: #1a1a2e;
+    --main-bg: #111521;
+    --card-bg: #2b2b4d;
+    --code-bg: #1b1e32;
+    --main-color: #0f4c75;
+    --accent-color-copy: #9333ea;
+    --accent-color-show: #4f4f4f;
+    --text-color: #e0e0e0;
+    --sub-text-color: #a0a0a0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    margin-bottom: 30px;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+#search-container {
+    margin-bottom: 30px;
+    padding: 20px 0;
+    border-bottom: 2px solid var(--accent-color-copy);
+}
+
+#search-input {
+    width: 80%;
+    max-width: 500px;
+    padding: 15px;
+    font-size: 1.1em;
+    border: 1px solid var(--accent-color-copy);
+    border-radius: 8px;
+    background-color: var(--code-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.5);
+}
+
+#filter-buttons {
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.filter-btn {
+    background-color: var(--accent-color-show);
+    color: var(--text-color);
+    border: 1px solid #4a4a6d;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+}
+
+.filter-btn:hover {
+    background-color: #666;
+}
+
+.filter-btn.active {
+    background-color: var(--accent-color-copy);
+    border-color: var(--accent-color-copy);
+    box-shadow: 0 0 8px rgba(147, 51, 234, 0.7);
+}
+
+#gun-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gun-card {
+    background-color: #1e263a;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-align: center;
+    padding: 0;
+    transition: transform 0.2s;
+}
+
+.gun-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(147, 51, 234, 0.3);
+}
+
+.gun-image-container {
+    height: 180px;
+    background-color: #313a4d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gun-image-container img {
+    max-height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    border-bottom: 2px solid var(--accent-color-copy);
+}
+
+.gun-info {
+    padding: 15px 10px 20px 10px;
+}
+
+.gun-info h2 {
+    margin: 5px 0 2px 0;
+    font-size: 1.4em;
+    color: var(--text-color);
+}
+
+.gun-info p {
+    margin: 0;
+    color: var(--sub-text-color);
+    font-size: 0.9em;
+}
+
+.code-display {
+    background-color: var(--code-bg);
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    word-break: break-all;
+    font-size: 0.8em;
+    text-align: left;
+    border: 1px solid #4a4a6d;
+}
+
+.code-display.hidden {
+    display: none;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: bold;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    flex-grow: 1;
+}
+
+.btn-show {
+    background-color: var(--accent-color-show);
+    color: white;
+}
+
+.btn-show:hover {
+    background-color: #666;
+}
+
+.btn-copy {
+    background-color: var(--accent-color-copy);
+    color: white;
+    flex-grow: 1;
+}
+
+.btn-copy:hover {
+    background-color: #7b29c9;
+    box-shadow: 0 0 8px rgba(147, 51, 234, 0.7);
+}
+
+.copy-success {
+    color: #4CAF50;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
