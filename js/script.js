@@ -188,7 +188,7 @@ const guns = [
             {
                 name: "IPAD PRO M4",
                 type: "HUD",
-                code: "ab3b-7468-3101-fff0-ee8e", 
+                code: "f37f-600c-56cb-7565-0ebb", 
                 imageUrl: "img/hudiphone.jpg"
             },
             {
@@ -296,3 +296,4 @@ document.addEventListener('DOMContentLoaded', () => {
     createFilterButtons();
     renderGuns(guns);
 });
+
